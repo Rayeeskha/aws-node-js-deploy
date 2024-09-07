@@ -9,14 +9,20 @@ app.get('/api/get',(req,res) => {
 app.get('/api/get_user_details',(req,res) => {
     res.send({
         user:{
-            name:"satyam",
-            age:22,
-            contact:12254
-        },env:process.env.NAME
+            name:"Rayees khan",
+            age:25,
+            contact:9554540271
+        }
     })
 });
 
+// local
+// app.listen(process.env.PORT,() => {
+//     console.log("listening to 8000");
+// })
 
-app.listen(process.env.PORT,() => {
-    console.log("listening to 8000");
-})
+// Production 
+app.listen(8000, '0.0.0.0', () => {
+    console.log('Server is running on port 8000');
+});
+  

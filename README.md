@@ -47,11 +47,12 @@ Inside the Nginx configuration file, add the following block to configure the re
 
 ```nginx
 location /api {
-    rewrite ^\/api\/(.*)$ /api/$1 break;
+    rewrite ^/api/(.*)$ /api/$1 break;
     proxy_pass http://localhost:8000;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
 }
 ```
 
