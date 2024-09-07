@@ -3,7 +3,7 @@ const app = express();
 require("dotenv").config()
 
 app.get('/api/get',(req,res) => {
-    res.send({message:"hello back to nodejs"})
+    res.send({message:"My CI/CD Pipeline setup to aws S3 using github action runner !"})
 })
 
 app.get('/api/get_user_details',(req,res) => {
