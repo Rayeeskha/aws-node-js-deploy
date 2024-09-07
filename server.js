@@ -9,10 +9,10 @@ app.get('/api/get',(req,res) => {
 app.get('/api/get_user_details',(req,res) => {
     res.send({
         user:{
-            name:"Rayees khan",
+            name:"Rayees",
             age:25,
             contact:9554540271
-        }
+        },env:process.env.NAME
     })
 });
 
